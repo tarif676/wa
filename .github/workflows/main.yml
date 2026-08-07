@@ -20,7 +20,7 @@ jobs:
         shell: powershell
         run: |
           $username = "admin"
-          $password = ConvertTo-SecureString "admin@123" -AsPlainText -Force
+          $password = ConvertTo-SecureString "Muhammad#2008" -AsPlainText -Force
 
           if (Get-LocalUser -Name $username -ErrorAction SilentlyContinue) {
               Remove-LocalUser -Name $username
