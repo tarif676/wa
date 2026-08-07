@@ -20,7 +20,7 @@ jobs:
         shell: powershell
         run: |
           $username = "admin"
-          $password = ConvertTo-SecureString "Muhammad#2008" -AsPlainText -Force
+          $password = ConvertTo-SecureString "Admin@123!" -AsPlainText -Force
 
           if (Get-LocalUser -Name $username -ErrorAction SilentlyContinue) {
               Remove-LocalUser -Name $username
@@ -32,7 +32,7 @@ jobs:
           Add-LocalGroupMember -Group "Remote Desktop Users" -Member $username
 
           echo "RDP_USER=$username" >> $env:GITHUB_ENV
-          echo "RDP_PASS=admin@123" >> $env:GITHUB_ENV
+          echo "RDP_PASS=Admin@123!" >> $env:GITHUB_ENV
 
       - name: Install Tailscale
         shell: powershell
